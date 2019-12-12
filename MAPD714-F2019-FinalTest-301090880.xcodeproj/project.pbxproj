@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -13,6 +13,10 @@
 		8E4EE97E23A179C000042AD6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8E4EE97D23A179C000042AD6 /* Assets.xcassets */; };
 		8E4EE98123A179C000042AD6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E4EE97F23A179C000042AD6 /* LaunchScreen.storyboard */; };
 		8E4EE98923A179F100042AD6 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8E4EE98823A179F100042AD6 /* GoogleService-Info.plist */; };
+		8E4EE98B23A1BCF100042AD6 /* BMITableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E4EE98A23A1BCF100042AD6 /* BMITableViewController.swift */; };
+		8E4EE98F23A1C7DC00042AD6 /* BMIStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E4EE98E23A1C7DC00042AD6 /* BMIStatus.swift */; };
+		8E4EE99123A1D28500042AD6 /* bmi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E4EE99023A1D28500042AD6 /* bmi.swift */; };
+		8E4EE99523A1D98900042AD6 /* UpdateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E4EE99423A1D98900042AD6 /* UpdateViewController.swift */; };
 		D4E6937A75E18CD9663E1CC2 /* Pods_MAPD714_F2019_FinalTest_301090880.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3CD17159B9D1027C888B4028 /* Pods_MAPD714_F2019_FinalTest_301090880.framework */; };
 /* End PBXBuildFile section */
 
@@ -27,6 +31,10 @@
 		8E4EE98023A179C000042AD6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8E4EE98223A179C000042AD6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8E4EE98823A179F100042AD6 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		8E4EE98A23A1BCF100042AD6 /* BMITableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BMITableViewController.swift; sourceTree = "<group>"; };
+		8E4EE98E23A1C7DC00042AD6 /* BMIStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BMIStatus.swift; sourceTree = "<group>"; };
+		8E4EE99023A1D28500042AD6 /* bmi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = bmi.swift; sourceTree = "<group>"; };
+		8E4EE99423A1D98900042AD6 /* UpdateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateViewController.swift; sourceTree = "<group>"; };
 		BC35556B717FC2F2D4D9EF7E /* Pods-MAPD714-F2019-FinalTest-301090880.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MAPD714-F2019-FinalTest-301090880.release.xcconfig"; path = "Target Support Files/Pods-MAPD714-F2019-FinalTest-301090880/Pods-MAPD714-F2019-FinalTest-301090880.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -48,7 +56,6 @@
 				6FA78F7AFB5F6D0452E2702C /* Pods-MAPD714-F2019-FinalTest-301090880.debug.xcconfig */,
 				BC35556B717FC2F2D4D9EF7E /* Pods-MAPD714-F2019-FinalTest-301090880.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -88,6 +95,10 @@
 				8E4EE97F23A179C000042AD6 /* LaunchScreen.storyboard */,
 				8E4EE98823A179F100042AD6 /* GoogleService-Info.plist */,
 				8E4EE98223A179C000042AD6 /* Info.plist */,
+				8E4EE98A23A1BCF100042AD6 /* BMITableViewController.swift */,
+				8E4EE98E23A1C7DC00042AD6 /* BMIStatus.swift */,
+				8E4EE99023A1D28500042AD6 /* bmi.swift */,
+				8E4EE99423A1D98900042AD6 /* UpdateViewController.swift */,
 			);
 			path = "MAPD714-F2019-FinalTest-301090880";
 			sourceTree = "<group>";
@@ -210,6 +221,10 @@
 			files = (
 				8E4EE97923A179BD00042AD6 /* ViewController.swift in Sources */,
 				8E4EE97723A179BD00042AD6 /* AppDelegate.swift in Sources */,
+				8E4EE99123A1D28500042AD6 /* bmi.swift in Sources */,
+				8E4EE98F23A1C7DC00042AD6 /* BMIStatus.swift in Sources */,
+				8E4EE98B23A1BCF100042AD6 /* BMITableViewController.swift in Sources */,
+				8E4EE99523A1D98900042AD6 /* UpdateViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
