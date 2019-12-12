@@ -12,8 +12,17 @@
 import UIKit
 import Firebase
 
+//extension to truncate double
+extension Double
+{
+    func truncate(places : Int)-> Double
+    {
+        return Double(floor(pow(10.0, Double(places)) * self)/pow(10.0, Double(places)))
+    }
+}
 class ViewController: UIViewController {
 
+    //Setting Attibutes
     
     @IBOutlet weak var nameText: UITextField!
     
@@ -51,6 +60,7 @@ class ViewController: UIViewController {
         }
     }
     
+    //Function which triggers on swich state change
     @IBAction func switchChange(_ sender: Any) {
         if(switchState == true){
             unitText.text = "Metric"
@@ -59,6 +69,7 @@ class ViewController: UIViewController {
         }
     }
     
+    //Add user to firebase realtime database
     @IBAction func addUser(_ sender: Any) {
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "dd/MM/yyyy hh:mm a"
@@ -68,14 +79,14 @@ class ViewController: UIViewController {
         weight = Double(weightText.text!)!
         
         if(switchState == true){
-            BMI = weight/height
+           BMI = weight/(height*height)
         } else {
-            BMI = (weight*703)/height
+            BMI = (weight*703)/(height*height)
         }
         
         
         let statusValue = self.bmiStatus.getBMIStatus(bmi: BMI)
-        let BMIString = String(BMI!)
+        let BMIString = String(BMI.truncate(places: 2))
         BMIValue.text = statusValue
         
         

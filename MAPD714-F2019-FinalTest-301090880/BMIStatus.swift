@@ -13,34 +13,27 @@
 
 import Foundation
 
+//Class to get status using BMI
 class BMIStatus {
     var status:String?
-    //var bmi:Int?
     
     public func getBMIStatus(bmi: Double) ->String {
        
         if(bmi<16){
             return "Severe Thinness"
-        }
-        if(bmi == 16 && bmi == 17){
+        }else if(bmi == 16 && bmi == 17){
             return "Moderate Thinness"
-        }
-        if(bmi<18.5){
+        }else if(bmi<18.5){
             return "Mild Thinness"
-        }
-        if(bmi<25){
+        }else if(bmi<25){
             return "Normal"
-        }
-        if(bmi<30){
+        }else if(bmi<30){
             return "Overweight"
-        }
-        if(bmi<35){
+        }else if(bmi<35){
             return "Obese Class 1"
-        }
-        if(bmi<=40){
+        }else if(bmi<=40){
             return "Obese Class 2"
-        }
-        if(bmi>40){
+        }else if(bmi>40){
             return "Obese Class 3"
         } else {
             return ""

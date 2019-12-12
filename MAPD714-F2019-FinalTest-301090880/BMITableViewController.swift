@@ -11,6 +11,7 @@
 import UIKit
 import Firebase
 
+//tableview to display user's BMI value and weight
 class BMITableViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
     

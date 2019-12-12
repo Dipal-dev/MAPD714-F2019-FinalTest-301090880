@@ -12,6 +12,7 @@
 import UIKit
 import Firebase
 
+//Update weight class
 class UpdateViewController: UIViewController {
 
     @IBOutlet weak var updatedWeight: UITextField!
@@ -36,6 +37,7 @@ class UpdateViewController: UIViewController {
             switchStatus = self.bmi?.unit
             unit.text = switchStatus
         }
+        //fetch data from row to update view controller
         let ref = Database.database().reference()
         ref.child("user").observeSingleEvent(of: .value, with: { (snapshot) in
             // Get user value
@@ -51,6 +53,7 @@ class UpdateViewController: UIViewController {
        
     }
     
+    //Update Value of weight and calculate BMI accordingly
     @IBAction func updateWeight(_ sender: Any) {
         let ref = Database.database().reference()
         
@@ -59,14 +62,14 @@ class UpdateViewController: UIViewController {
         dateFormatter.dateFormat = "dd/MM/yyyy hh:mm a"
         
         if(switchStatus == "Metric"){
-            BMI = weight/height
+            BMI = weight/(height*height)
         } else {
-            BMI = (weight*703)/height!
+            BMI = (weight*703)/(height*height)
         }
         
         let dictionary = [ "date"   : dateFormatter.string(from: Date()) ,
                            "weight" : updatedWeight.text!,
-                           "BMI"    : String(BMI),
+                           "BMI"    : String(BMI.truncate(places: 2)),
                            "switchStatus": switchStatus]
         
         

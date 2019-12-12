@@ -14,6 +14,7 @@
 import Foundation
 import UIKit
 
+//Model Class for BMI Object
 class bmi: NSObject {
     // id which is set from firebase to uniquely identify it
     var uniqueId:String?

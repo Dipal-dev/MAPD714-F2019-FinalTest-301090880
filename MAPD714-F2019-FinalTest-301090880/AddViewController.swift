@@ -8,10 +8,10 @@
 
 import UIKit
 import Firebase
+
+//Add data Class
 class AddViewController: UIViewController {
 
-    
-    
     
     @IBOutlet weak var addWeight: UITextField!
     
@@ -50,6 +50,7 @@ class AddViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
+    //Function which triggers on swich state change
     @IBAction func switchChange(_ sender: Any) {
         if(switchState == true){
             unitText.text = "Metric"
@@ -58,24 +59,26 @@ class AddViewController: UIViewController {
         }
     }
     
-
+    //Add data to firebase
     @IBAction func addWeight(_ sender: Any) {
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "dd/MM/yyyy hh:mm a"
         
         weight = Double(addWeight.text!)!
+        var heightSquare:Double
+        heightSquare = (height*height)
         
-        if(switchState == true){
-            BMI = weight/height
+        if( unitText.text == "Metric"){
+            BMI = weight/heightSquare
         } else {
-            BMI = (weight*703)/height
+            BMI = (weight*703)/heightSquare
         }
         
         let ref = Database.database().reference()
         let tKey = ref.child("track").childByAutoId().key
         
         let statusValue = self.bmiStatus.getBMIStatus(bmi: BMI)
-        let BMIString = String(BMI!)
+        let BMIString = String(BMI!.truncate(places: 2))
         BMIValue.text = statusValue
         
         let dictionary = [ "date"   : dateFormatter.string(from: Date()) ,
