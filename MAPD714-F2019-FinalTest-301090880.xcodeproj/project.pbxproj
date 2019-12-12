@@ -17,6 +17,7 @@
 		8E4EE98F23A1C7DC00042AD6 /* BMIStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E4EE98E23A1C7DC00042AD6 /* BMIStatus.swift */; };
 		8E4EE99123A1D28500042AD6 /* bmi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E4EE99023A1D28500042AD6 /* bmi.swift */; };
 		8E4EE99523A1D98900042AD6 /* UpdateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E4EE99423A1D98900042AD6 /* UpdateViewController.swift */; };
+		8E4EE99723A1EE3A00042AD6 /* AddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E4EE99623A1EE3900042AD6 /* AddViewController.swift */; };
 		D4E6937A75E18CD9663E1CC2 /* Pods_MAPD714_F2019_FinalTest_301090880.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3CD17159B9D1027C888B4028 /* Pods_MAPD714_F2019_FinalTest_301090880.framework */; };
 /* End PBXBuildFile section */
 
@@ -35,6 +36,7 @@
 		8E4EE98E23A1C7DC00042AD6 /* BMIStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BMIStatus.swift; sourceTree = "<group>"; };
 		8E4EE99023A1D28500042AD6 /* bmi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = bmi.swift; sourceTree = "<group>"; };
 		8E4EE99423A1D98900042AD6 /* UpdateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateViewController.swift; sourceTree = "<group>"; };
+		8E4EE99623A1EE3900042AD6 /* AddViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddViewController.swift; sourceTree = "<group>"; };
 		BC35556B717FC2F2D4D9EF7E /* Pods-MAPD714-F2019-FinalTest-301090880.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MAPD714-F2019-FinalTest-301090880.release.xcconfig"; path = "Target Support Files/Pods-MAPD714-F2019-FinalTest-301090880/Pods-MAPD714-F2019-FinalTest-301090880.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -99,6 +101,7 @@
 				8E4EE98E23A1C7DC00042AD6 /* BMIStatus.swift */,
 				8E4EE99023A1D28500042AD6 /* bmi.swift */,
 				8E4EE99423A1D98900042AD6 /* UpdateViewController.swift */,
+				8E4EE99623A1EE3900042AD6 /* AddViewController.swift */,
 			);
 			path = "MAPD714-F2019-FinalTest-301090880";
 			sourceTree = "<group>";
@@ -221,6 +224,7 @@
 			files = (
 				8E4EE97923A179BD00042AD6 /* ViewController.swift in Sources */,
 				8E4EE97723A179BD00042AD6 /* AppDelegate.swift in Sources */,
+				8E4EE99723A1EE3A00042AD6 /* AddViewController.swift in Sources */,
 				8E4EE99123A1D28500042AD6 /* bmi.swift in Sources */,
 				8E4EE98F23A1C7DC00042AD6 /* BMIStatus.swift in Sources */,
 				8E4EE98B23A1BCF100042AD6 /* BMITableViewController.swift in Sources */,

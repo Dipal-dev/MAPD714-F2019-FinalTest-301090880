@@ -1,10 +1,15 @@
+
 //
-//  BMIStatus.swift
-//  MAPD714-F2019-FinalTest-301090880
+//  FIle Name: BMIStatus.swift
+//  Project Name: MAPD714-F2019-FinalTest-301090880
 //
-//  Created by Dipal Patel on 2019-12-11.
+//  Author: Dipal Patel
+//  Student ID: 301090880
+//  Date: 2019-12-11
 //  Copyright © 2019 Dipal Patel. All rights reserved.
 //
+
+
 
 import Foundation
 

@@ -8,6 +8,7 @@
 //  Copyright © 2019 Dipal Patel. All rights reserved.
 //
 
+
 import UIKit
 import Firebase
 
@@ -32,7 +33,9 @@ class ViewController: UIViewController {
     }
     
     
-    @IBOutlet weak var addWeight: UITextField!
+   
+    @IBOutlet weak var BMIValue: UILabel!
+    
     
     var height:Double!
     var weight:Double!
@@ -72,6 +75,8 @@ class ViewController: UIViewController {
         
         
         let statusValue = self.bmiStatus.getBMIStatus(bmi: BMI)
+        let BMIString = String(BMI!)
+        BMIValue.text = statusValue
         
         
         
@@ -95,8 +100,8 @@ class ViewController: UIViewController {
         
         let dictionary = [ "date"   : dateFormatter.string(from: Date()) ,
                            "weight" : weightText.text!,
-                           "BMI"    : statusValue,
-                            "switchStatus": unitText.text]
+                           "BMI"    : BMIString,
+                           "switchStatus": unitText.text]
         
         
         let trackChildUpdates = ["/track/\(tKey!)": dictionary]
@@ -106,10 +111,7 @@ class ViewController: UIViewController {
         
     }
     
-    
-    @IBAction func addWeight(_ sender: Any) {
-        
-    }
+   
     
 }
 

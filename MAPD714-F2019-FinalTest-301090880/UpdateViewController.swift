@@ -1,10 +1,13 @@
 //
-//  UpdateViewController.swift
-//  MAPD714-F2019-FinalTest-301090880
+//  FIle Name: UpdateViewController.swift
+//  Project Name: MAPD714-F2019-FinalTest-301090880
 //
-//  Created by Dipal Patel on 2019-12-11.
+//  Author: Dipal Patel
+//  Student ID: 301090880
+//  Date: 2019-12-11
 //  Copyright © 2019 Dipal Patel. All rights reserved.
 //
+
 
 import UIKit
 import Firebase
@@ -12,6 +15,10 @@ import Firebase
 class UpdateViewController: UIViewController {
 
     @IBOutlet weak var updatedWeight: UITextField!
+    
+    
+    @IBOutlet weak var unit: UILabel!
+    
     var bmi:bmi?
     var key:String?
     var switchStatus:String?
@@ -19,6 +26,7 @@ class UpdateViewController: UIViewController {
     var weight:Double!
     var bmiStatus = BMIStatus()
     var height:Double!
+    var unitText:String!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,6 +34,7 @@ class UpdateViewController: UIViewController {
             updatedWeight.text = self.bmi?.weight
             key = self.bmi?.uniqueId
             switchStatus = self.bmi?.unit
+            unit.text = switchStatus
         }
         let ref = Database.database().reference()
         ref.child("user").observeSingleEvent(of: .value, with: { (snapshot) in
@@ -49,10 +58,6 @@ class UpdateViewController: UIViewController {
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "dd/MM/yyyy hh:mm a"
         
-        //
-       
-        
-        
         if(switchStatus == "Metric"){
             BMI = weight/height
         } else {
@@ -61,7 +66,8 @@ class UpdateViewController: UIViewController {
         
         let dictionary = [ "date"   : dateFormatter.string(from: Date()) ,
                            "weight" : updatedWeight.text!,
-                           "BMI"    : self.bmiStatus.getBMIStatus(bmi: BMI)]
+                           "BMI"    : String(BMI),
+                           "switchStatus": switchStatus]
         
         
         let trackChildUpdates = ["/track/\(key!)": dictionary]
